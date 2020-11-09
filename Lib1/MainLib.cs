@@ -62,7 +62,7 @@ namespace Lib1
             var result = new List<double>();
             var values = new int[input.Count];
             Array.Copy(input.ToArray(), values, input.Count);
-            if (window % 2 == 1)
+            if (window % 2 == 1 && window >= 3 && window <= 1000001)
             for(int i = 0; i < input.Count - 1 - window; i++)
             {
                 result.Add(GetPartAverage(values.SubArray<int>(i, window)));
