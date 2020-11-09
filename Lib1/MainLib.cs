@@ -9,6 +9,16 @@ namespace Lib1
 {
     public static class MainLib
     {
+        public static void PerformTask(string filename, int window)
+        {
+            var vals = OpenFileAndCalculate(filename);
+            var averages = CalculateAverage(vals, window);
+            foreach(var avg in averages)
+            {
+                Console.WriteLine(avg);
+            }
+        }
+        
         public static List<int> OpenFileAndCalculate(string filename)
         {
             var result = new List<int>();
